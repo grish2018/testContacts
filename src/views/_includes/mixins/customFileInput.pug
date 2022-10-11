@@ -1,0 +1,7 @@
+mixin customFileInput(label)
+    label.customFileInput
+      input(type="file")
+      .customFileInput__labelWrapper
+        +svgsprite("addFile")
+        span 
+         |#{label}

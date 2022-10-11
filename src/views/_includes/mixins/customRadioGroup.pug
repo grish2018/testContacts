@@ -1,0 +1,8 @@
+mixin customRadioGroup(data)
+  .customRadioGroup
+    each item in data
+     label.customRadioGroup__item
+      input(type="radio" name=item.name value=item.value id=item.value)
+      .customRadioGroup__item__labelWrapper
+        span 
+         |#{item.label}

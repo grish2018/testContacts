@@ -1,3 +1,12 @@
 // @import url('fonts/fontname/stylesheet.css');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500&display=swap');
 
+@font-face {font-family: "Mabry Pro";
+    src: url("./fonts/e4397c6cf12af9f58d46e124d18d6d93.eot"); /* IE9*/
+    src: url("./fonts/e4397c6cf12af9f58d46e124d18d6d93.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("./fonts/e4397c6cf12af9f58d46e124d18d6d93.woff2") format("woff2"), /* chrome、firefox */
+    url("./fonts/e4397c6cf12af9f58d46e124d18d6d93.woff") format("woff"), /* chrome、firefox */
+    url("./fonts/e4397c6cf12af9f58d46e124d18d6d93.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("./fonts/e4397c6cf12af9f58d46e124d18d6d93.svg#MabryPro-Regular") format("svg"); /* iOS 4.1- */
+    font-display: swap
+  }

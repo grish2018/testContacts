@@ -1,0 +1,7 @@
+mixin customCheckbox(label, name, value)
+    label.customCheckbox
+      input(type="checkbox" name=name value=value id=value)
+      .customCheckbox__labelWrapper
+        span 
+         |#{label}
+      

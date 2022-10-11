@@ -22,104 +22,494 @@
     <meta property="og:description" content="description">
     <meta property="twitter:description" content="description">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   </head>
   <body class="body">
-    <header class="header">
-      <div class="header__inner">header</div>
-    </header>
-    <div class="content">
-      <div class="container">
-        <div class="block">
-          <ul class="demo-menu">
-            <li><a href="other-page.html">Other Page</a></li>
-            <li><span class="link js-scrollto" data-target="#scroll">Scroll</span></li>
-            <li><a href="popup.html" data-fancybox data-type="ajax">Fancy Ajax Popup</a></li>
-          </ul>
-        </div>
-        <div class="block _mb-none demo-block">
-          <pre>.block._mb-none</pre>
-        </div>
-        <div class="block demo-block">
-          <pre>.block</pre>
-        </div>
-        <div class="block"> <span class="text-muted">.text-muted</span> <span class="text-nowrap">.text-nowrap</span> <span class="text-uppercase">.text-uppercase</span> <span class="color-primary">.color-primary</span> <span class="color-secondary">.color-secondary</span> <a href="#">a</a> <span class="link">.link</span> <br><span class="demo-font">font-family-alt</span></div>
-        <div class="block">
-          <pre>i.icon-{name}</pre><span style="font-size:2rem"><i class="icon-facebook"> </i><i class="icon-twitter"> </i><i class="icon-instagram"> </i><i class="icon-vk"> </i></span>
-        </div>
-        <div class="block demo-flex">
-          <button class="btn">.btn </button>
-          <button class="btn" disabled>.btn(disabled)</button>
-          <button class="btn _primary">.btn._primary</button>
-          <button class="btn _primary" disabled>.btn._primary(disabled)</button>
-          <button class="btn _secondary">.btn._secondary</button>
-          <button class="btn _secondary" disabled>.btn._secondary(disabled)</button>
-        </div>
-        <div class="block">
-          <div class="input js-label">
-            <input>
-            <label>.input.js-label input</label>
-          </div>
-          <div class="input _error js-label">
-            <input required>
-            <label>.input._error.js-label input(required)</label>
-          </div>
-          <div class="input js-label">
-            <input disabled>
-            <label>.input.js-label input(disabled)</label>
-          </div>
-          <div class="input js-label">
-            <input class="js-mask" type="tel">
-            <label>.input.js-label input.js-mask(type="tel")</label>
-          </div>
-        </div>
-        <div class="block">
-          <pre>.bk</pre>
-          <p class="bk"><span class="bk__item"><a href="#">span.bk__item a(href="#")</a></span><span class="bk__item"><a href="#">span.bk__item a(href="#")</a></span><span class="bk__item">span.bk__item</span></p>
-        </div>
-        <div class="block">
-          <pre>+svgsprite("{name}")</pre>
-              <svg class="svgsprite _wikipedia">
-                <use xlink:href="assets/img/svgsprite/svgsprite.svg#wikipedia"></use>
+    <div class="mobileMenu js-mobileMenu">
+      <div class="mobileMenu__header"><img src="assets/img/logo.svg" alt="">
+        <div class="js-mobileMenuCloseIcon">
+              <svg class="svgsprite _closeIcon">
+                <use xlink:href="assets/img/svgsprite/svgsprite.svg#closeIcon"></use>
               </svg>
-              <svg class="svgsprite _track">
-                <use xlink:href="assets/img/svgsprite/svgsprite.svg#track"></use>
-              </svg>
-        </div>
-        <div class="block">
-          <pre>+pngsprite("{name}")</pre><i class="pngsprite _insta-raz"></i><i class="pngsprite _insta-dva"></i>
-        </div>
-        <div class="block" id="scroll">
-          <pre>div.rte</pre>
-          <div class="rte">
-            <h3>Title H3</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas iaculis nisl, in fermentum urna scelerisque nec. Mauris enim erat, bibendum sed condimentum at, ultrices non arcu. Morbi eu sem porttitor, vulputate justo ut, fringilla turpis. Donec in elementum nunc. Cras maximus faucibus dictum. Duis sodales lacus ut eros sollicitudin tristique. Duis vitae tincidunt sem, eget ullamcorper turpis. Maecenas tristique eget leo sed sodales.</p>
-            <ul>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-            </ul>
-            <p>Vivamus risus erat, dictum vel facilisis non, consectetur id eros. Mauris pretium libero libero, quis malesuada ante eleifend nec. Vivamus massa lorem, tempus non nibh in, egestas facilisis augue. Vestibulum eleifend erat ante, et interdum lacus posuere sodales. Nam elementum dignissim nisi et pretium. Nunc tristique ipsum purus, ut rutrum leo vestibulum a. Praesent fringilla arcu orci, at faucibus ante convallis a.</p>
-            <p> <img src="assets/img/lena.jpg" alt=""><img src="assets/img/transparency.png" alt=""><img src="assets/img/logo.svg" alt=""></p>
-            <ol>
-              <li>One</li>
-              <li>Two</li>
-              <li>Three</li>
-              <li>Four</li>
-            </ol>
-            <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
-            <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
-            <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
-            <p>Praesent accumsan ipsum a semper luctus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam a ex turpis. Vivamus vulputate dapibus quam, non iaculis lacus feugiat in. Nullam nec erat in orci ultricies convallis ut et nunc. Nunc risus nisl, dignissim vel ipsum sed, viverra tempus lacus. Nam ut justo at nulla fringilla finibus. Mauris vulputate mauris sit amet cursus imperdiet. Aenean finibus mattis tortor, et rhoncus risus pharetra sit amet.</p>
-          </div>
-        </div>
-        <div class="block">
-          <pre>img.lazyload(data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="")</pre><img class="lazyload" data-src="assets/img/lena.jpg" src="assets/img/dot.jpg" alt="">
         </div>
       </div>
+      <nav class="mobileMenu__nav"> 
+        <ul class="mobileMenu__nav_list">
+          <li class="mobileMenu__nav_list_item"><a href="" _blank>Услуги</a></li>
+          <li class="mobileMenu__nav_list_item"><a href="" _blank>Кейсы</a></li>
+          <li class="mobileMenu__nav_list_item"><a href="" _blank>Студия</a>    </li>
+          <li class="mobileMenu__nav_list_item"><a href="" _blank>Блог</a>    </li>
+          <li class="mobileMenu__nav_list_item"><a href="" _blank>Контакты</a>    </li>
+        </ul>
+      </nav>
+      <div class="mobileMenu__footer"> 
+        <ul class="mobileMenu__footer_list">
+          <li class="mobileMenu__footer_list_item-header">Связаться с нами:</li>
+          <li class="mobileMenu__footer_list_item"><a href="mailto:hello@riverstart.ru">hello@riverstart.ru</a></li>
+          <li class="mobileMenu__footer_list_item"><a href="tel:+496170961709">8 (499) 112-46-21</a></li>
+        </ul>
+        <ul class="mobileMenu__footer_list-socials">
+          <li class="mobileMenu__footer_list_item"><a href="" _blank>Facebook</a></li>
+          <li class="mobileMenu__footer_list_item"><a href="" _blank>Instagram</a></li>
+          <li class="mobileMenu__footer_list_item"><a href="" _blank>Behance</a></li>
+        </ul>
+      </div>
     </div>
-    <footer class="footer">
-      <div class="container">footer</div>
+    <header class="header">
+      <div class="header__inner container">
+        <div class="header__inner_section-left">
+              <svg class="svgsprite _riverstartLogo">
+                <use xlink:href="assets/img/svgsprite/svgsprite.svg#riverstartLogo"></use>
+              </svg>
+          <nav class="header__nav">
+            <ul class="header__nav-left">
+              <li class="header__nav-left_item">Сайты</li>
+              <li class="header__nav-left_item">Сервисы</li>
+              <li class="header__nav-left_item">Маркетинг</li>
+              <li class="header__nav-left_item">SEO</li>
+              <li class="header__nav-left_item">Приложения</li>
+              <li class="header__nav-left_item">Брендинг</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__inner_section-rigth">
+          <nav class="header__nav">
+            <ul class="header__nav-rigth">
+              <li class="header__nav-rigth_item">Кейсы</li>
+              <li class="header__nav-rigth_item">Студия</li>
+              <li class="header__nav-rigth_item">Блог</li>
+              <li class="header__nav-rigth_item">Контакты</li>
+            </ul>
+          </nav>
+          <button class="btn _secondary _small header__discussBtn">
+             Обсудить проект</button>
+          <div class="header__burger js-burgerMenu"><span></span><span></span></div>
+        </div>
+      </div>
+    </header>
+    <div class="content">
+      <main>
+        <div class="content__welcome container"> 
+          <div class="content__welcome_title">Приходите в гости, пишите, звоните</div>
+          <div class="content__welcome_contacts"> 
+            <div class="content__welcome_contacts_item">
+              <div class="content__welcome_contacts_item_wrapper">
+                <div class="content__welcome_contacts_item_title">Поговорить с нами по телефону</div>
+                <div class="content__welcome_contacts_item_contact"><a href="tel:8 (499) 112-46-21">8 (499) 112-46-21</a></div>
+              </div>
+              <div class="content__welcome_contacts_item_dialog">
+                <div class="content__welcome_contacts_item_dialogAvatar">
+                  <div class="content__welcome_contacts_item_dialogAvatar_imgWrapper"><img class="img lazyload" data-src="assets/img/ira.png" src="assets/img/dot.jpg" alt=""></div>
+                </div>
+                    <div class="comicBubble comicBubble-lg">
+                      <div class="comicBubble__wrapper"><span class="comicBubble__text"> Меня зовут Ира, скорее всего вам отвечу именно я 👋</span><span class="comicBubble__desc">Ирина Пшеницина, аккаунт-менеджер</span></div>
+                      <div class="comicBubble__pointer"></div>
+                    </div>
+              </div>
+            </div>
+            <div class="content__welcome_contacts_item content__welcome_contacts_item-rigth">
+              <div class="content__welcome_contacts_item_wrapper">
+                <div class="content__welcome_contacts_item_title">Написать нам на почту</div>
+                <div class="content__welcome_contacts_item_contact"><a href="mailto:hello@riverstart.ru">hello@riverstart.ru</a></div>
+              </div>
+            </div>
+            <div class="content__welcome_contacts_item">
+              <div class="content__welcome_contacts_item_wrapper">
+                <div class="content__welcome_contacts_item_title">Поговорить с нашим аккаунт-менеджером в Telegram</div>
+                <div class="content__welcome_contacts_item_contact"><a href="@ekhohrin">@ekhohrin
+                    <div class="content__welcome_contacts_item_avatar"> 
+                      <div class="content__welcome_contacts_item_avatar_imgWrapper"><img class="img lazyload" data-src="assets/img/tgAvatar.png" src="assets/img/dot.jpg" alt=""></div>
+                    </div></a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content__offices container">
+          <div class="content__offices_bgWrapper img"></div>
+          <div class="content__offices_wrapper">
+            <div class="content__offices_item"> 
+              <div class="content__offices_image"><img class="img lazyload" data-src="assets/img/office1.png" src="assets/img/dot.jpg" alt=""></div>
+              <div class="content__offices_desc"> <span class="content__offices_desc_title">Нижегородский офис</span><span class="content__offices_desc_address">ул. Рождественская, 26</span><a class="content__offices_desc_tel" href="tel:8 (831) 2-889-354">8 (831) 2-889-354</a><a class="content__offices_desc_pos" href="">Как добраться 
+                      <svg class="svgsprite _arrow">
+                        <use xlink:href="assets/img/svgsprite/svgsprite.svg#arrow"></use>
+                      </svg></a></div>
+            </div>
+            <div class="content__offices_item"> 
+              <div class="content__offices_image"><img class="img lazyload" data-src="assets/img/office2.png" src="assets/img/dot.jpg" alt=""></div>
+              <div class="content__offices_desc"> <span class="content__offices_desc_title">Московский офис</span><span class="content__offices_desc_address">Новая площадь, 6</span><a class="content__offices_desc_tel" href="tel:8 (499) 112-46-21">8 (499) 112-46-21</a><a class="content__offices_desc_pos" href="">Как добраться 
+                      <svg class="svgsprite _arrow">
+                        <use xlink:href="assets/img/svgsprite/svgsprite.svg#arrow"></use>
+                      </svg></a></div>
+            </div>
+            <div class="content__offices_item"> 
+              <div class="content__offices_image"><img class="img lazyload" data-src="assets/img/office3.png" src="assets/img/dot.jpg" alt=""></div>
+              <div class="content__offices_desc"> <span class="content__offices_desc_title">Таллинский офис</span><span class="content__offices_desc_address">3 korrus, Metro Plaza, Viru väljak 2</span><a class="content__offices_desc_tel" href="tel:+372 610-42-53">+372 610-42-53  </a></div>
+            </div>
+          </div>
+        </div>
+        <div class="content__partners"><span class="content__partners_title">
+             Наши клиенты</span>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="swiper-slide_block"> 
+                      <svg class="svgsprite _internorm">
+                        <use xlink:href="assets/img/svgsprite/svgsprite.svg#internorm"></use>
+                      </svg><span>5 лет вместе</span>
+                </div>
+                <div class="swiper-slide_block"> 
+                      <svg class="svgsprite _gasprom">
+                        <use xlink:href="assets/img/svgsprite/svgsprite.svg#gasprom"></use>
+                      </svg><span>1 год вместе    </span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide_block"> 
+                      <svg class="svgsprite _rosatom">
+                        <use xlink:href="assets/img/svgsprite/svgsprite.svg#rosatom"></use>
+                      </svg><span>1 год вместе</span>
+                </div>
+                <div class="swiper-slide_block"> 
+                      <svg class="svgsprite _mrdoors">
+                        <use xlink:href="assets/img/svgsprite/svgsprite.svg#mrdoors"></use>
+                      </svg><span>2 года вместе    </span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide_block"> 
+                      <svg class="svgsprite _lobachevsky">
+                        <use xlink:href="assets/img/svgsprite/svgsprite.svg#lobachevsky"></use>
+                      </svg><span>1 год вместе</span>
+                </div>
+                <div class="swiper-slide_block"> 
+                      <svg class="svgsprite _bona">
+                        <use xlink:href="assets/img/svgsprite/svgsprite.svg#bona"></use>
+                      </svg><span>1 год вместе    </span>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="swiper-slide_block"> 
+                      <svg class="svgsprite _gaz">
+                        <use xlink:href="assets/img/svgsprite/svgsprite.svg#gaz"></use>
+                      </svg><span>1 год вместе</span>
+                </div>
+                <div class="swiper-slide_block"> 
+                      <svg class="svgsprite _nguni">
+                        <use xlink:href="assets/img/svgsprite/svgsprite.svg#nguni"></use>
+                      </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content__partners_dialogWrapper">
+            <div class="content__partners_dialog">
+              <div class="content__partners_dialogAvatar">
+                <div class="content__partners_dialogAvatar_imgWrapper"><img class="img lazyload" data-src="assets/img/partnersAvatar.png" src="assets/img/dot.jpg" alt=""></div>
+              </div>
+                  <div class="comicBubble">
+                    <div class="comicBubble__wrapper"><span class="comicBubble__text"> Среднее время работы с клиентом — 5 лет 💙</span><span class="comicBubble__desc"></span></div>
+                    <div class="comicBubble__pointer"></div>
+                  </div>
+            </div>
+            <div class="swiper-button-wrappper">
+              <div class="swiper-button-prev">
+                    <svg class="svgsprite _arrow">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#arrow"></use>
+                    </svg>
+              </div>
+              <div class="swiper-button-next">
+                    <svg class="svgsprite _arrow">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#arrow"></use>
+                    </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="footer__discuss container"> <span class="footer__discuss_title">
+             Обсудить проект</span>
+          <p class="footer__discuss_desc">
+             Расскажите о проекте в форме ниже или свяжитесь с нами напрямую </p>
+          <div class="footer__discuss_section"> 
+            <div class="footer__discuss_section_block"> 
+              <div class="footer__discuss_section_block_title"><a href="">@ekhohrin</a></div><span class="footer__discuss_section_block_desc">Написать нашему аккаунт-директору в Telegram</span>
+            </div>
+            <div class="footer__discuss_section_block">
+              <div class="footer__discuss_section_block_title">
+                <div class="footer__discuss_section_block_title_avatar"> <img class="img lazyload" data-src="assets/img/telegramAvatar.jpg" src="assets/img/dot.jpg" alt=""></div><a href="mailto:hello@riverstart.ru">hello@riverstart.ru</a>
+              </div><span class="footer__discuss_section_block_desc">Написать нам на почту</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__form container"> 
+          <form>
+            <div class="footer__form__checkboxes"><span class="footer__form__checkboxes_title">Что вас интересует?</span>
+              <div class="footer__form__checkboxes_wrapper">
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="site" id="site">
+                        <div class="customCheckbox__labelWrapper"><span> Сайт</span></div>
+                      </label>
+                </div>
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="webService" id="webService">
+                        <div class="customCheckbox__labelWrapper"><span> Веб-сервис</span></div>
+                      </label>
+                </div>
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="marketing" id="marketing">
+                        <div class="customCheckbox__labelWrapper"><span> Маркетинг</span></div>
+                      </label>
+                </div>
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="application" id="application">
+                        <div class="customCheckbox__labelWrapper"><span> Приложение</span></div>
+                      </label>
+                </div>
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="branding" id="branding">
+                        <div class="customCheckbox__labelWrapper"><span> Брендинг</span></div>
+                      </label>
+                </div>
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="other" id="other">
+                        <div class="customCheckbox__labelWrapper"><span> Что-то ещё</span></div>
+                      </label>
+                </div>
+              </div>
+            </div>
+            <div class="footer__form__inputs"> 
+              <div class="input js-label footer__form__inputs_nameInput">
+                <input>
+                <label>Имя</label>
+              </div>
+              <div class="footer__form__inputs_wrapper"> 
+                <div class="input js-label footer__form__inputs_emailInput">
+                  <input>
+                  <label>Почта</label>
+                </div>
+                <div class="input js-label footer__form__inputs_telInput">
+                  <input class="js-mask" type="tel">
+                  <label>Телефон</label>
+                </div>
+              </div>
+            </div>
+            <div class="input js-label">
+              <textarea></textarea>
+              <label>Опишите задачу</label>
+            </div>
+            <div class="footer__form__radioGroup">
+              <div class="footer__form__radioGroup_title">
+                 Бюджет (₽):</div>
+                  <div class="customRadioGroup">
+                    <label class="customRadioGroup__item">
+                      <input type="radio" name="value" value="50000&lt;" id="50000&lt;">
+                      <div class="customRadioGroup__item__labelWrapper"><span> до 500к</span></div>
+                    </label>
+                    <label class="customRadioGroup__item">
+                      <input type="radio" name="value" value="1ml&lt;" id="1ml&lt;">
+                      <div class="customRadioGroup__item__labelWrapper"><span> до 1 млн</span></div>
+                    </label>
+                    <label class="customRadioGroup__item">
+                      <input type="radio" name="value" value="&gt;1ml" id="&gt;1ml">
+                      <div class="customRadioGroup__item__labelWrapper"><span> &gt;1 млн</span></div>
+                    </label>
+                  </div>
+            </div>
+            <div class="footer__form__fileInput"> 
+                  <label class="customFileInput">
+                    <input type="file">
+                    <div class="customFileInput__labelWrapper">
+                          <svg class="svgsprite _addFile">
+                            <use xlink:href="assets/img/svgsprite/svgsprite.svg#addFile"></use>
+                          </svg><span> Прикрепить бриф</span>
+                    </div>
+                  </label>
+            </div>
+            <div class="footer__form__submitButton"> 
+              <button class="btn _secondary">Оставить заявку </button>
+            </div>
+            <div class="footer__form__descl"> <span>Нажав на кнопку, вы соглашаетесь с политикой </span><span class="black">обработки персональных данных </span></div>
+          </form>
+        </div>
+        <div class="footer__infoWrapper">
+          <div class="footer__infoWrapper_offices container">
+            <div class="footer__infoWrapper_offices_block">
+              <div class="footer__infoWrapper_offices_item"><span class="footer__infoWrapper_offices_item_title">Московский офис</span><span>Новая пл., 6</span><a href="tel:8 (499) 112-46-21">8 (499) 112-46-21</a></div>
+              <div class="footer__infoWrapper_offices_item"><span class="footer__infoWrapper_offices_item_title">Нижегородский офис</span><span>ул. Рождественская, 26</span><a href="tel:8 (831) 2-889-354">8 (831) 2-889-354</a></div>
+            </div>
+          </div>
+          <div class="footer__infoWrapper_offices-head">
+            <div class="footer__infoWrapper_info">
+              <div class="footer__infoWrapper_offices_item"><span class="footer__infoWrapper_offices_item_title">Нижегородский офис</span><span>ул. Рождественская, 26</span><a href="tel:8 (831) 2-889-354">8 (831) 2-889-354</a>
+                <div class="footer__infoWrapper_offices_item_oceanDesc">Oceanstart LLC<span>Worldwide outsourcing and outstaffing   </span><a class="footer__infoWrapper_offices_item_oceanLink" href="">oceanstart.dev
+                        <svg class="svgsprite _link">
+                          <use xlink:href="assets/img/svgsprite/svgsprite.svg#link"></use>
+                        </svg></a></div>
+              </div>
+            </div>
+            <div class="footer__infoWrapper_offices_oceanIcon">
+                  <svg class="svgsprite _oceanStart">
+                    <use xlink:href="assets/img/svgsprite/svgsprite.svg#oceanStart"></use>
+                  </svg>
+            </div>
+          </div>
+          <div class="footer__socialsAndPrivacy container">
+            <div class="footer__socialsAndPrivacy_socials"><a class="footer__socialsAndPrivacy_socials_item" href="">
+                    <svg class="svgsprite _facebook">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#facebook"></use>
+                    </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                    <svg class="svgsprite _twitter">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#twitter"></use>
+                    </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                    <svg class="svgsprite _instagram">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#instagram"></use>
+                    </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                    <svg class="svgsprite _vk">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#vk"></use>
+                    </svg></a><a class="footer__socialsAndPrivacy_socials_item" href="">
+                    <svg class="svgsprite _behance">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#behance"></use>
+                    </svg></a></div>
+            <div class="footer__socialsAndPrivacy_privacy"><span class="footer__socialsAndPrivacy_privacy_title">Политика конфиденциальности</span>
+              <div class="footer__socialsAndPrivacy_privacy_content"> 
+                    <svg class="svgsprite _riverstartIcon">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#riverstartIcon"></use>
+                    </svg>2021 © Riverstart Digital. Все права защищены
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__form footer__form-lg container"> 
+        <form>
+          <div class="footer__form__checkboxes"><span class="footer__form__checkboxes_title">Что вас интересует?</span>
+            <div class="footer__form__checkboxes_wrapper">
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="site" id="site">
+                      <div class="customCheckbox__labelWrapper"><span> Сайт</span></div>
+                    </label>
+              </div>
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="webService" id="webService">
+                      <div class="customCheckbox__labelWrapper"><span> Веб-сервис</span></div>
+                    </label>
+              </div>
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="marketing" id="marketing">
+                      <div class="customCheckbox__labelWrapper"><span> Маркетинг</span></div>
+                    </label>
+              </div>
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="application" id="application">
+                      <div class="customCheckbox__labelWrapper"><span> Приложение</span></div>
+                    </label>
+              </div>
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="branding" id="branding">
+                      <div class="customCheckbox__labelWrapper"><span> Брендинг</span></div>
+                    </label>
+              </div>
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="other" id="other">
+                      <div class="customCheckbox__labelWrapper"><span> Что-то ещё</span></div>
+                    </label>
+              </div>
+            </div>
+          </div>
+          <div class="footer__form__inputs"> 
+            <div class="input js-label footer__form__inputs_nameInput">
+              <input>
+              <label>Имя</label>
+            </div>
+            <div class="footer__form__inputs_wrapper"> 
+              <div class="input js-label footer__form__inputs_emailInput">
+                <input>
+                <label>Почта</label>
+              </div>
+              <div class="input js-label footer__form__inputs_telInput">
+                <input class="js-mask" type="tel">
+                <label>Телефон</label>
+              </div>
+            </div>
+          </div>
+          <div class="input js-label">
+            <textarea></textarea>
+            <label>Опишите задачу</label>
+          </div>
+          <div class="footer__form__radioGroup">
+            <div class="footer__form__radioGroup_title">
+               Бюджет (₽):</div>
+                <div class="customRadioGroup">
+                  <label class="customRadioGroup__item">
+                    <input type="radio" name="value" value="50000&lt;" id="50000&lt;">
+                    <div class="customRadioGroup__item__labelWrapper"><span> до 500к</span></div>
+                  </label>
+                  <label class="customRadioGroup__item">
+                    <input type="radio" name="value" value="1ml&lt;" id="1ml&lt;">
+                    <div class="customRadioGroup__item__labelWrapper"><span> до 1 млн</span></div>
+                  </label>
+                  <label class="customRadioGroup__item">
+                    <input type="radio" name="value" value="&gt;1ml" id="&gt;1ml">
+                    <div class="customRadioGroup__item__labelWrapper"><span> &gt;1 млн</span></div>
+                  </label>
+                </div>
+          </div>
+          <div class="footer__form__fileInput"> 
+                <label class="customFileInput">
+                  <input type="file">
+                  <div class="customFileInput__labelWrapper">
+                        <svg class="svgsprite _addFile">
+                          <use xlink:href="assets/img/svgsprite/svgsprite.svg#addFile"></use>
+                        </svg><span> Прикрепить бриф</span>
+                  </div>
+                </label>
+          </div>
+          <div class="footer__form__submitButton"> 
+            <button class="btn _secondary">Оставить заявку </button>
+          </div>
+          <div class="footer__form__descl"> <span>Нажав на кнопку, вы соглашаетесь с политикой </span><span class="black">обработки персональных данных </span></div>
+        </form>
+      </div>
+      <div class="footer__socialsAndPrivacy-lg container">
+        <div class="footer__socialsAndPrivacy_socials"><a class="footer__socialsAndPrivacy_socials_item" href="">
+                <svg class="svgsprite _facebook">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#facebook"></use>
+                </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                <svg class="svgsprite _twitter">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#twitter"></use>
+                </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                <svg class="svgsprite _instagram">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#instagram"></use>
+                </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                <svg class="svgsprite _vk">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#vk"></use>
+                </svg></a><a class="footer__socialsAndPrivacy_socials_item" href="">
+                <svg class="svgsprite _behance">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#behance"></use>
+                </svg></a></div>
+        <div class="footer__socialsAndPrivacy_privacy"><span class="footer__socialsAndPrivacy_privacy_title">Политика конфиденциальности</span>
+          <div class="footer__socialsAndPrivacy_privacy_content"> 
+                <svg class="svgsprite _riverstartIcon">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#riverstartIcon"></use>
+                </svg>2021 © Riverstart Digital. Все права защищены
+          </div>
+        </div>
+      </div>
     </footer>
     <div class="hidden">
       <!-- include popups here-->

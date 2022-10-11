@@ -1,11 +1,11 @@
 @font-face {
 	font-family: "iconfont";
-	src: url('fonts/iconfont/iconfont.eot?1655029841');
-	src: url('fonts/iconfont/iconfont.eot?1655029841#iefix') format('eot'),
-		url('fonts/iconfont/iconfont.woff2?1655029841') format('woff2'),
-		url('fonts/iconfont/iconfont.woff?1655029841') format('woff'),
-		url('fonts/iconfont/iconfont.ttf?1655029841') format('truetype'),
-		url('fonts/iconfont/iconfont.svg?1655029841#iconfont') format('svg');
+	src: url('fonts/iconfont/iconfont.eot?1665425959');
+	src: url('fonts/iconfont/iconfont.eot?1665425959#iefix') format('eot'),
+		url('fonts/iconfont/iconfont.woff2?1665425959') format('woff2'),
+		url('fonts/iconfont/iconfont.woff?1665425959') format('woff'),
+		url('fonts/iconfont/iconfont.ttf?1665425959') format('truetype'),
+		url('fonts/iconfont/iconfont.svg?1665425959#iconfont') format('svg');
     font-display: swap;
 }
 
@@ -29,17 +29,20 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == facebook {
+	@if $filename == behance {
 		$char: "\E001";
 	}
-	@if $filename == instagram {
+	@if $filename == facebook {
 		$char: "\E002";
 	}
-	@if $filename == twitter {
+	@if $filename == instagram {
 		$char: "\E003";
 	}
-	@if $filename == vk {
+	@if $filename == twitter {
 		$char: "\E004";
+	}
+	@if $filename == vk {
+		$char: "\E005";
 	}
 
 	@return $char;
@@ -56,6 +59,9 @@
 	}
 }
 
+.icon-behance {
+	@include icon(behance);
+}
 .icon-facebook {
 	@include icon(facebook);
 }
@@ -68,3 +74,4 @@
 .icon-vk {
 	@include icon(vk);
 }
+

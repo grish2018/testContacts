@@ -1,3 +1,34 @@
 header.header
-    .header__inner
-        | header
+    .header__inner.container
+        .header__inner_section-left
+            +svgsprite("riverstartLogo")
+            nav.header__nav
+                ul.header__nav-left
+                    li.header__nav-left_item
+                       | Сайты
+                    li.header__nav-left_item
+                       | Сервисы
+                    li.header__nav-left_item
+                       | Маркетинг
+                    li.header__nav-left_item
+                       | SEO
+                    li.header__nav-left_item
+                       | Приложения
+                    li.header__nav-left_item
+                       | Брендинг
+        .header__inner_section-rigth
+            nav.header__nav
+                ul.header__nav-rigth
+                    li.header__nav-rigth_item
+                       | Кейсы
+                    li.header__nav-rigth_item
+                       | Студия
+                    li.header__nav-rigth_item
+                       | Блог
+                    li.header__nav-rigth_item
+                       | Контакты
+            button.btn._secondary._small.header__discussBtn 
+             |Обсудить проект
+            .header__burger.js-burgerMenu
+                span
+                span

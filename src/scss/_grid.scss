@@ -152,8 +152,8 @@
   @each $breakpoint,
   $container-padding in $paddings {
     @include up($breakpoint, $breakpoints) {
-      padding-right: $container-padding;
-      padding-left : $container-padding;
+      padding-right: $container-padding !important;
+      padding-left : $container-padding !important;
     }
   }
 }

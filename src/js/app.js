@@ -4,6 +4,8 @@ import Inputmask from 'inputmask'
 
 import InputLabel from './components/InputLabel'
 
+import Swiper,{ Navigation, Autoplay } from 'swiper';
+
 class App {
     scrollToOffset = 100
     popupLoadedEvent = 'app.popup_loaded'
@@ -18,6 +20,9 @@ class App {
 
         this.initFancybox()
         this.initScrollTo()
+        this.initBurgerClickHandler()
+        this.initMobileMenuCloseHandler()
+        this.initSwiper()
 
         this.initMask()
         document.addEventListener(this.popupLoadedEvent, (ev) => {
@@ -27,6 +32,44 @@ class App {
         new InputLabel
 
         this.body.classList.add('_init')
+    }
+
+    initSwiper(){
+    console.log(Swiper);
+        var swiper = new Swiper('.mySwiper', {
+            grabCursor: true,
+            slidesPerView: 2,
+            loop: true,
+            autoplay: {
+              delay: 1000,
+              disableOnInteraction: false,
+            },
+            spaceBetween: 74,
+            speed: 1000,
+            modules: [Navigation, Autoplay],
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            breakpoints: {
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 141
+                },
+                // when window width is >= 1280px
+                1280: {
+                    slidesPerView: 4,
+                    spaceBetween: 130
+                },
+                // when window width is >= 1920px
+                1920: {
+                    slidesPerView: 4,
+                    spaceBetween: 180
+                }
+              },
+
+          });
     }
 
     initFancybox() {
@@ -156,6 +199,20 @@ class App {
                     return false
                 })
             }
+        })
+    }
+
+    initBurgerClickHandler() {
+        document.querySelector('.js-burgerMenu').addEventListener('click', () => {
+            document.querySelector('.js-mobileMenu').style.visibility = 'visible'
+            document.querySelector('body').style.overflow = 'hidden'
+        })
+    }
+
+    initMobileMenuCloseHandler(){
+        document.querySelector('.js-mobileMenuCloseIcon').addEventListener('click', () => {
+            document.querySelector('.js-mobileMenu').style.visibility = 'hidden'
+            document.querySelector('body').style.overflow = 'initial'
         })
     }
 }

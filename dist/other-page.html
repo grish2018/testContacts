@@ -22,16 +22,357 @@
     <meta property="og:description" content="description">
     <meta property="twitter:description" content="description">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
   </head>
   <body class="body">
+    <div class="mobileMenu js-mobileMenu">
+      <div class="mobileMenu__header"><img src="assets/img/logo.svg" alt="">
+        <div class="js-mobileMenuCloseIcon">
+              <svg class="svgsprite _closeIcon">
+                <use xlink:href="assets/img/svgsprite/svgsprite.svg#closeIcon"></use>
+              </svg>
+        </div>
+      </div>
+      <nav class="mobileMenu__nav"> 
+        <ul class="mobileMenu__nav_list">
+          <li class="mobileMenu__nav_list_item"><a href="" _blank>Услуги</a></li>
+          <li class="mobileMenu__nav_list_item"><a href="" _blank>Кейсы</a></li>
+          <li class="mobileMenu__nav_list_item"><a href="" _blank>Студия</a>    </li>
+          <li class="mobileMenu__nav_list_item"><a href="" _blank>Блог</a>    </li>
+          <li class="mobileMenu__nav_list_item"><a href="" _blank>Контакты</a>    </li>
+        </ul>
+      </nav>
+      <div class="mobileMenu__footer"> 
+        <ul class="mobileMenu__footer_list">
+          <li class="mobileMenu__footer_list_item-header">Связаться с нами:</li>
+          <li class="mobileMenu__footer_list_item"><a href="mailto:hello@riverstart.ru">hello@riverstart.ru</a></li>
+          <li class="mobileMenu__footer_list_item"><a href="tel:+496170961709">8 (499) 112-46-21</a></li>
+        </ul>
+        <ul class="mobileMenu__footer_list-socials">
+          <li class="mobileMenu__footer_list_item"><a href="" _blank>Facebook</a></li>
+          <li class="mobileMenu__footer_list_item"><a href="" _blank>Instagram</a></li>
+          <li class="mobileMenu__footer_list_item"><a href="" _blank>Behance</a></li>
+        </ul>
+      </div>
+    </div>
     <header class="header">
-      <div class="header__inner">header</div>
+      <div class="header__inner container">
+        <div class="header__inner_section-left">
+              <svg class="svgsprite _riverstartLogo">
+                <use xlink:href="assets/img/svgsprite/svgsprite.svg#riverstartLogo"></use>
+              </svg>
+          <nav class="header__nav">
+            <ul class="header__nav-left">
+              <li class="header__nav-left_item">Сайты</li>
+              <li class="header__nav-left_item">Сервисы</li>
+              <li class="header__nav-left_item">Маркетинг</li>
+              <li class="header__nav-left_item">SEO</li>
+              <li class="header__nav-left_item">Приложения</li>
+              <li class="header__nav-left_item">Брендинг</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="header__inner_section-rigth">
+          <nav class="header__nav">
+            <ul class="header__nav-rigth">
+              <li class="header__nav-rigth_item">Кейсы</li>
+              <li class="header__nav-rigth_item">Студия</li>
+              <li class="header__nav-rigth_item">Блог</li>
+              <li class="header__nav-rigth_item">Контакты</li>
+            </ul>
+          </nav>
+          <button class="btn _secondary _small header__discussBtn">
+             Обсудить проект</button>
+          <div class="header__burger js-burgerMenu"><span></span><span></span></div>
+        </div>
+      </div>
     </header>
     <div class="content">
       <div class="container"><a href="index.html">Index Page</a></div>
     </div>
-    <footer class="footer">
-      <div class="container">footer</div>
+    <footer>
+      <div class="footer">
+        <div class="footer__discuss container"> <span class="footer__discuss_title">
+             Обсудить проект</span>
+          <p class="footer__discuss_desc">
+             Расскажите о проекте в форме ниже или свяжитесь с нами напрямую </p>
+          <div class="footer__discuss_section"> 
+            <div class="footer__discuss_section_block"> 
+              <div class="footer__discuss_section_block_title"><a href="">@ekhohrin</a></div><span class="footer__discuss_section_block_desc">Написать нашему аккаунт-директору в Telegram</span>
+            </div>
+            <div class="footer__discuss_section_block">
+              <div class="footer__discuss_section_block_title">
+                <div class="footer__discuss_section_block_title_avatar"> <img class="img lazyload" data-src="assets/img/telegramAvatar.jpg" src="assets/img/dot.jpg" alt=""></div><a href="mailto:hello@riverstart.ru">hello@riverstart.ru</a>
+              </div><span class="footer__discuss_section_block_desc">Написать нам на почту</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer__form container"> 
+          <form>
+            <div class="footer__form__checkboxes"><span class="footer__form__checkboxes_title">Что вас интересует?</span>
+              <div class="footer__form__checkboxes_wrapper">
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="site" id="site">
+                        <div class="customCheckbox__labelWrapper"><span> Сайт</span></div>
+                      </label>
+                </div>
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="webService" id="webService">
+                        <div class="customCheckbox__labelWrapper"><span> Веб-сервис</span></div>
+                      </label>
+                </div>
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="marketing" id="marketing">
+                        <div class="customCheckbox__labelWrapper"><span> Маркетинг</span></div>
+                      </label>
+                </div>
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="application" id="application">
+                        <div class="customCheckbox__labelWrapper"><span> Приложение</span></div>
+                      </label>
+                </div>
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="branding" id="branding">
+                        <div class="customCheckbox__labelWrapper"><span> Брендинг</span></div>
+                      </label>
+                </div>
+                <div class="footer__form__checkboxes_item">
+                      <label class="customCheckbox">
+                        <input type="checkbox" name="interests" value="other" id="other">
+                        <div class="customCheckbox__labelWrapper"><span> Что-то ещё</span></div>
+                      </label>
+                </div>
+              </div>
+            </div>
+            <div class="footer__form__inputs"> 
+              <div class="input js-label footer__form__inputs_nameInput">
+                <input>
+                <label>Имя</label>
+              </div>
+              <div class="footer__form__inputs_wrapper"> 
+                <div class="input js-label footer__form__inputs_emailInput">
+                  <input>
+                  <label>Почта</label>
+                </div>
+                <div class="input js-label footer__form__inputs_telInput">
+                  <input class="js-mask" type="tel">
+                  <label>Телефон</label>
+                </div>
+              </div>
+            </div>
+            <div class="input js-label">
+              <textarea></textarea>
+              <label>Опишите задачу</label>
+            </div>
+            <div class="footer__form__radioGroup">
+              <div class="footer__form__radioGroup_title">
+                 Бюджет (₽):</div>
+                  <div class="customRadioGroup">
+                    <label class="customRadioGroup__item">
+                      <input type="radio" name="value" value="50000&lt;" id="50000&lt;">
+                      <div class="customRadioGroup__item__labelWrapper"><span> до 500к</span></div>
+                    </label>
+                    <label class="customRadioGroup__item">
+                      <input type="radio" name="value" value="1ml&lt;" id="1ml&lt;">
+                      <div class="customRadioGroup__item__labelWrapper"><span> до 1 млн</span></div>
+                    </label>
+                    <label class="customRadioGroup__item">
+                      <input type="radio" name="value" value="&gt;1ml" id="&gt;1ml">
+                      <div class="customRadioGroup__item__labelWrapper"><span> &gt;1 млн</span></div>
+                    </label>
+                  </div>
+            </div>
+            <div class="footer__form__fileInput"> 
+                  <label class="customFileInput">
+                    <input type="file">
+                    <div class="customFileInput__labelWrapper">
+                          <svg class="svgsprite _addFile">
+                            <use xlink:href="assets/img/svgsprite/svgsprite.svg#addFile"></use>
+                          </svg><span> Прикрепить бриф</span>
+                    </div>
+                  </label>
+            </div>
+            <div class="footer__form__submitButton"> 
+              <button class="btn _secondary">Оставить заявку </button>
+            </div>
+            <div class="footer__form__descl"> <span>Нажав на кнопку, вы соглашаетесь с политикой </span><span class="black">обработки персональных данных </span></div>
+          </form>
+        </div>
+        <div class="footer__infoWrapper">
+          <div class="footer__infoWrapper_offices container">
+            <div class="footer__infoWrapper_offices_block">
+              <div class="footer__infoWrapper_offices_item"><span class="footer__infoWrapper_offices_item_title">Московский офис</span><span>Новая пл., 6</span><a href="tel:8 (499) 112-46-21">8 (499) 112-46-21</a></div>
+              <div class="footer__infoWrapper_offices_item"><span class="footer__infoWrapper_offices_item_title">Нижегородский офис</span><span>ул. Рождественская, 26</span><a href="tel:8 (831) 2-889-354">8 (831) 2-889-354</a></div>
+            </div>
+          </div>
+          <div class="footer__infoWrapper_offices-head">
+            <div class="footer__infoWrapper_info">
+              <div class="footer__infoWrapper_offices_item"><span class="footer__infoWrapper_offices_item_title">Нижегородский офис</span><span>ул. Рождественская, 26</span><a href="tel:8 (831) 2-889-354">8 (831) 2-889-354</a>
+                <div class="footer__infoWrapper_offices_item_oceanDesc">Oceanstart LLC<span>Worldwide outsourcing and outstaffing   </span><a class="footer__infoWrapper_offices_item_oceanLink" href="">oceanstart.dev
+                        <svg class="svgsprite _link">
+                          <use xlink:href="assets/img/svgsprite/svgsprite.svg#link"></use>
+                        </svg></a></div>
+              </div>
+            </div>
+            <div class="footer__infoWrapper_offices_oceanIcon">
+                  <svg class="svgsprite _oceanStart">
+                    <use xlink:href="assets/img/svgsprite/svgsprite.svg#oceanStart"></use>
+                  </svg>
+            </div>
+          </div>
+          <div class="footer__socialsAndPrivacy container">
+            <div class="footer__socialsAndPrivacy_socials"><a class="footer__socialsAndPrivacy_socials_item" href="">
+                    <svg class="svgsprite _facebook">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#facebook"></use>
+                    </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                    <svg class="svgsprite _twitter">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#twitter"></use>
+                    </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                    <svg class="svgsprite _instagram">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#instagram"></use>
+                    </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                    <svg class="svgsprite _vk">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#vk"></use>
+                    </svg></a><a class="footer__socialsAndPrivacy_socials_item" href="">
+                    <svg class="svgsprite _behance">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#behance"></use>
+                    </svg></a></div>
+            <div class="footer__socialsAndPrivacy_privacy"><span class="footer__socialsAndPrivacy_privacy_title">Политика конфиденциальности</span>
+              <div class="footer__socialsAndPrivacy_privacy_content"> 
+                    <svg class="svgsprite _riverstartIcon">
+                      <use xlink:href="assets/img/svgsprite/svgsprite.svg#riverstartIcon"></use>
+                    </svg>2021 © Riverstart Digital. Все права защищены
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__form footer__form-lg container"> 
+        <form>
+          <div class="footer__form__checkboxes"><span class="footer__form__checkboxes_title">Что вас интересует?</span>
+            <div class="footer__form__checkboxes_wrapper">
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="site" id="site">
+                      <div class="customCheckbox__labelWrapper"><span> Сайт</span></div>
+                    </label>
+              </div>
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="webService" id="webService">
+                      <div class="customCheckbox__labelWrapper"><span> Веб-сервис</span></div>
+                    </label>
+              </div>
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="marketing" id="marketing">
+                      <div class="customCheckbox__labelWrapper"><span> Маркетинг</span></div>
+                    </label>
+              </div>
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="application" id="application">
+                      <div class="customCheckbox__labelWrapper"><span> Приложение</span></div>
+                    </label>
+              </div>
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="branding" id="branding">
+                      <div class="customCheckbox__labelWrapper"><span> Брендинг</span></div>
+                    </label>
+              </div>
+              <div class="footer__form__checkboxes_item">
+                    <label class="customCheckbox">
+                      <input type="checkbox" name="interests" value="other" id="other">
+                      <div class="customCheckbox__labelWrapper"><span> Что-то ещё</span></div>
+                    </label>
+              </div>
+            </div>
+          </div>
+          <div class="footer__form__inputs"> 
+            <div class="input js-label footer__form__inputs_nameInput">
+              <input>
+              <label>Имя</label>
+            </div>
+            <div class="footer__form__inputs_wrapper"> 
+              <div class="input js-label footer__form__inputs_emailInput">
+                <input>
+                <label>Почта</label>
+              </div>
+              <div class="input js-label footer__form__inputs_telInput">
+                <input class="js-mask" type="tel">
+                <label>Телефон</label>
+              </div>
+            </div>
+          </div>
+          <div class="input js-label">
+            <textarea></textarea>
+            <label>Опишите задачу</label>
+          </div>
+          <div class="footer__form__radioGroup">
+            <div class="footer__form__radioGroup_title">
+               Бюджет (₽):</div>
+                <div class="customRadioGroup">
+                  <label class="customRadioGroup__item">
+                    <input type="radio" name="value" value="50000&lt;" id="50000&lt;">
+                    <div class="customRadioGroup__item__labelWrapper"><span> до 500к</span></div>
+                  </label>
+                  <label class="customRadioGroup__item">
+                    <input type="radio" name="value" value="1ml&lt;" id="1ml&lt;">
+                    <div class="customRadioGroup__item__labelWrapper"><span> до 1 млн</span></div>
+                  </label>
+                  <label class="customRadioGroup__item">
+                    <input type="radio" name="value" value="&gt;1ml" id="&gt;1ml">
+                    <div class="customRadioGroup__item__labelWrapper"><span> &gt;1 млн</span></div>
+                  </label>
+                </div>
+          </div>
+          <div class="footer__form__fileInput"> 
+                <label class="customFileInput">
+                  <input type="file">
+                  <div class="customFileInput__labelWrapper">
+                        <svg class="svgsprite _addFile">
+                          <use xlink:href="assets/img/svgsprite/svgsprite.svg#addFile"></use>
+                        </svg><span> Прикрепить бриф</span>
+                  </div>
+                </label>
+          </div>
+          <div class="footer__form__submitButton"> 
+            <button class="btn _secondary">Оставить заявку </button>
+          </div>
+          <div class="footer__form__descl"> <span>Нажав на кнопку, вы соглашаетесь с политикой </span><span class="black">обработки персональных данных </span></div>
+        </form>
+      </div>
+      <div class="footer__socialsAndPrivacy-lg container">
+        <div class="footer__socialsAndPrivacy_socials"><a class="footer__socialsAndPrivacy_socials_item" href="">
+                <svg class="svgsprite _facebook">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#facebook"></use>
+                </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                <svg class="svgsprite _twitter">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#twitter"></use>
+                </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                <svg class="svgsprite _instagram">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#instagram"></use>
+                </svg></a><a class="footer__socialsAndPrivacy_socials_item" href=""> 
+                <svg class="svgsprite _vk">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#vk"></use>
+                </svg></a><a class="footer__socialsAndPrivacy_socials_item" href="">
+                <svg class="svgsprite _behance">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#behance"></use>
+                </svg></a></div>
+        <div class="footer__socialsAndPrivacy_privacy"><span class="footer__socialsAndPrivacy_privacy_title">Политика конфиденциальности</span>
+          <div class="footer__socialsAndPrivacy_privacy_content"> 
+                <svg class="svgsprite _riverstartIcon">
+                  <use xlink:href="assets/img/svgsprite/svgsprite.svg#riverstartIcon"></use>
+                </svg>2021 © Riverstart Digital. Все права защищены
+          </div>
+        </div>
+      </div>
     </footer>
     <div class="hidden">
       <!-- include popups here-->

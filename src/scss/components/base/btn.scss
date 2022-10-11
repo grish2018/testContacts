@@ -5,11 +5,14 @@
     width: 100%;
     padding: 0 1rem;
     text-align: center;
-    text-transform: uppercase;
     @include transition((background, opacity));
     background: $color-gray;
     line-height: 3rem;
     cursor: pointer;
+    border-radius: 0.75rem;
+    @include up(xl) {
+        font-size: 1.25rem;
+    }
 
     @include up(md) {
         width: auto;
@@ -26,6 +29,9 @@
     &:disabled {
         opacity: .7;
         pointer-events: none;
+    }
+    &._small{
+        border-radius: 0.4rem;
     }
 
     &._primary,

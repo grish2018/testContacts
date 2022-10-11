@@ -1,26 +1,133 @@
 .header {
     $root: &;
-
     position: fixed;
     z-index: $header-z-index;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: $color-white;
+    background-color: $color-bg;
     height: map-get($header-height, sm);
 
-    @each $key in (md, lg, xl) {
-        @include up($key) {
-            height: map-get($header-height, $key);
+        @each $key in (md, lg, xl) {
+            @include up($key) {
+                height: map-get($header-height, $key);
+            }
         }
-    }
 
     &__inner {
-        @extend .container;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        &_section{
+            &-left{
+                display: flex;
+                align-items: center;
+                ._riverstartLogo{
+                    width: map-get($header-logo-width, sm);
+
+                    @each $key in (md, lg, xl) {
+                        @include up($key) {
+                            width: map-get($header-logo-width, $key);
+                        }
+                    }
+                }
+            }
+            &-rigth{
+                display: flex;
+                align-items: center;
+            }
+
+        }
+
+    }
+    &__nav-rigth,
+    &__nav-left,
+    &__discussBtn{
+        display: none;
+    }
+    &__nav{
+        &-left{
+            margin-left: 1.25rem;
+            @include up(xl) {
+                margin-left: 2rem;
+            }
+            @include up(lg) {
+                display: inline-flex !important;
+            }
+            &_item{
+                font-size: 0.9rem;
+                cursor: pointer;
+                background: $color-white;
+                padding: 0.3rem 0.8rem;
+                border-radius: 2.6rem;
+                color: $color-base;
+                @include transition((background, color));
+                &:hover{
+                    background: $color-secondary;
+                    color: $color-white;
+
+                }
+                &:not(:last-child) {
+                    margin-right: 0.25rem;
+                    @include up(xl) {
+                        margin-right: 0.5rem;
+                    }
+                }
+                @include up(xl) {
+                    padding: 0.5rem  1.1rem;
+                }
+            }
+        }
+        &-rigth{
+            margin-right: 2.9rem;
+            @include up(xl) {
+                margin-right: 3.3rem;
+            }
+            @include up(md) {
+                display: inline-flex !important;
+            }
+            &_item{
+                cursor: pointer;
+                color: $color-white;
+                font-size: 1rem;
+                @include transition(color);
+                &:hover{
+                    color: $color-gray;
+                }
+                &:not(:last-child) {
+                    margin-right: 1.6rem;
+                    @include up(xl) {
+                        margin-right: 2.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__discussBtn{
+        @include up(md) {
+            display: inline-block !important;
+        }
+    }
+
+    &__burger{
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: 1.5rem;
+        @include down(md) {
+            display: flex !important;
+        }
+        & span{
+            &:first-child{
+                margin-bottom: 6px;
+            }
+            width: 23px;
+            height: 2px;
+            background: $color-white;
+        }
     }
 
 

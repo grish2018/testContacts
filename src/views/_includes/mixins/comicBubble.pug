@@ -1,0 +1,8 @@
+mixin comicBubble(text, desc, size)
+    .comicBubble(class = size ==='lg' ?  'comicBubble-lg' : '')
+        .comicBubble__wrapper
+            span.comicBubble__text 
+                |#{text}
+            span.comicBubble__desc
+                |#{desc}
+        .comicBubble__pointer

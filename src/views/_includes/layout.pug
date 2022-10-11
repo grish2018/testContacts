@@ -8,6 +8,12 @@ html(lang="ru")
     body.body(class=bodyClass)
         include mixins/svgsprite
         include mixins/pngsprite
+        include mixins/customCheckbox
+        include mixins/customRadioGroup
+        include mixins/customFileInput
+        include mixins/comicBubble
+        
+        include blocks/mobileMenu
 
         block header
             include blocks/header
@@ -23,6 +29,7 @@ html(lang="ru")
 
         block styles
             link(rel="stylesheet" href="assets/css/common.css?v=" + PACKAGE.version)
+           
         block scripts-config
             script.
                 /* изменяемые настройки скриптов, указаны значения по умолчанию */
